@@ -1,4 +1,4 @@
-name: Type wise 
+name: Build and Run
 
 on: [push, pull_request]
 
