@@ -47,15 +47,15 @@ namespace TypewiseAlert
       TO_CONTROLLER,
       TO_EMAIL
     };
-    public struct BatteryCharacter {
+    public struct EquipmentCharacter {
       public CoolingType coolingType;
       public string brand;
     }
     public static void checkAndAlert(
-        AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC) {
+        AlertTarget alertTarget, EquipmentCharacter characteristic, double temperatureInC) {
 
       BreachType breachType = classifyTemperatureBreach(
-        batteryChar.coolingType, temperatureInC
+        characteristic.coolingType, temperatureInC
       );
 
       switch(alertTarget) {

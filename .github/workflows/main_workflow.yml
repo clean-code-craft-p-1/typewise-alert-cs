@@ -18,7 +18,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         fetch-depth: 0
 
@@ -38,7 +38,7 @@ jobs:
       run: reportgenerator "-reports:TypewiseAlert.Test\TestResults\*\*.xml" "-targetdir:coverage"
     
     - name: Create coverage artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: coverage
         path: coverage
